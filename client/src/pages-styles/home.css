@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.82);
+}
+
+.home-card-title {
+    margin-bottom: 10px;
+    background: orange;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 26px;
+    color: #000;
+    box-shadow: 0px 6px 8px -6px #111;
+}
+
+.home-card-date {
+    align-self: center;
+    color: gray;
+}
+
+.home-card-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.home-card-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 5rem;
+    width: 20rem;
+    color: #283c2a;
+}
+
+.home-card-team img {
+    height: 6rem;
+}
+
+.home-card-tipp {
+    font-weight: bold;
+    font-size: 26px;
+    color: #4D8A4F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-card-tipp h1 {
+    font-size: 20px;
+    color: #283c2a;
+}
+
+.home-card-tipp img {
+    max-width: 5rem;
+}

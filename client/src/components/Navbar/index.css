@@ -1,0 +1,10 @@
+.reg-btn.reg-btn {
+    background: #ff8d00;
+    color: #fff;
+    border: 2px solid #ff8d00;
+}
+
+.reg-btn.reg-btn:hover {
+    background: #fff;
+    color: #ff8d00;
+}
