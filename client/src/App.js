@@ -11,13 +11,15 @@ import Profile from './pages/profile';
 import Footer from './components/Footer';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './contexts/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
+import ResetPassword from './pages/ResetPassword'
+import UpdateProfile from './pages/UpdateProfile'
 
 function App() {
   return (
     <Router>
       <AuthProvider>
       <Navbar />
-      
         <Container
           className="d-flex align-items-center justify-content-center"
           style={{ marginTop: "1rem" }}
@@ -31,13 +33,16 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/partners" component={Login} />
               <Route path="/register" component={Register} />
-              <Route path="/profile" component={Profile} />
+              <Route path="/reset-password" component={ResetPassword} />
+              <PrivateRoute path="/profile" component={Profile} />
+              <PrivateRoute path="/update-profile" component={UpdateProfile} />
             </Switch>
           </div>
         </Container>
       </AuthProvider>
       <Footer />
     </Router>
+    
   );
 }
 

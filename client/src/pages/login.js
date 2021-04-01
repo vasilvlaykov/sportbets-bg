@@ -47,6 +47,9 @@ export default function Login() {
                             Вход
                         </Button>
                     </Form>
+                    <div className="w-100 text-center mt-3">
+                        <Link to="/reset-password">Забравена парола</Link>
+                    </div>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">

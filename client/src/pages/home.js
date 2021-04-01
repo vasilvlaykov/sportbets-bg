@@ -18,8 +18,8 @@ const Home = () => {
                     </section>
                     <section className="home-card-tipp">
                         Over 2.5
-                        <h1>Коефициент: 2.35</h1>
-                        <a href="https://sports.bwin.de/de/sports"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Bwin_logo.png" alt="bookmaker"/></a>
+                        <h1>Коефициент:2.35</h1>
+                        <a href="https://sports.bwin.de/de/sports" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Bwin_logo.png" alt="bookmaker"/></a>
                     </section>
                     <section className="home-card-team">
                         <h2>Liverpool</h2>
