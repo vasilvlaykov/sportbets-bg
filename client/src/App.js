@@ -14,6 +14,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import ResetPassword from './pages/ResetPassword'
 import UpdateProfile from './pages/UpdateProfile'
+import AddTip from './pages/AddTip';
 
 function App() {
   return (
@@ -21,10 +22,9 @@ function App() {
       <AuthProvider>
       <Navbar />
         <Container
-          className="d-flex align-items-center justify-content-center"
-          style={{ marginTop: "1rem" }}
+          style={{ marginTop: "1rem", display: "flex", justifyContent: "center", alignItems: "center" }}
         >
-          <div className="w-100" style={{ maxWidth: "400px" }}>
+          <div>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
@@ -35,6 +35,7 @@ function App() {
               <Route path="/register" component={Register} />
               <Route path="/reset-password" component={ResetPassword} />
               <PrivateRoute path="/profile" component={Profile} />
+              <PrivateRoute path="/add-tip" component={AddTip} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
             </Switch>
           </div>
