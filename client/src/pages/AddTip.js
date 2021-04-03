@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Form, Card, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
 import app from '../firebase'
+import { useAuth } from '../contexts/AuthContext'
 
 export default function AddTip() {
     const [team1, setTeam1] = useState('');
@@ -11,6 +12,9 @@ export default function AddTip() {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const history = useHistory();
+    const { currentUser } = useAuth();
+
+    const userEmail = currentUser.email;
 
     const changeTeam1 = (e) => {
         setTeam1(e.target.value)
@@ -40,7 +44,8 @@ export default function AddTip() {
             team2,
             tipp,
             date,
-            time
+            time,
+            userEmail
         }
 
         dataRef.push(tipData)
