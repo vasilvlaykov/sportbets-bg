@@ -12,9 +12,12 @@ import Footer from './components/Footer';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import AdminRoute from './components/AdminRoute';
 import ResetPassword from './pages/ResetPassword'
 import UpdateProfile from './pages/UpdateProfile'
 import AddTip from './pages/AddTip';
+import Admin from './pages/admin';
+import ErrorAdmin from './pages/error';
 
 function App() {
   return (
@@ -34,9 +37,11 @@ function App() {
               <Route path="/partners" component={Login} />
               <Route path="/register" component={Register} />
               <Route path="/reset-password" component={ResetPassword} />
+              <Route path="/error" component={ErrorAdmin} />
               <PrivateRoute path="/profile" component={Profile} />
               <PrivateRoute path="/add-tip" component={AddTip} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
+              <AdminRoute path="/admin" component={Admin} />
             </Switch>
           </div>
         </Container>

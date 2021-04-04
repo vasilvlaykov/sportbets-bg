@@ -1,32 +1,57 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../pages-styles/home.css'
+import { useAuth } from '../contexts/AuthContext'
+import { Button } from 'react-bootstrap'
+import { useHistory } from 'react-router'
+import app from '../firebase'
 
 const Home = () => {
+    const { currentUser } = useAuth();
+    const history = useHistory();
+    const [dailyTip, setDailyTip] = useState();
+
+
+
+    function editDaily() {
+        history.push('/admin')
+    }
+
+    useEffect(() => {
+        const tipRef = app.database().ref('daily-tip');
+        tipRef.on('value', (snapshot) => {
+            const dailyTip = snapshot.val();
+            setDailyTip(dailyTip);
+        })
+    }, [])
+
     return (
-        <div className="home-wrapper">
+        <div className="home-wrapper" style={{display: "flex", flexDirection: "column"}}>
             <section className="home-card">
                 <section className="home-card-title">
                     <h1>Прогноза на деня</h1>
                 </section>
                 <section className="home-card-date">
-                    <h4>Date: 12.12.12 12:12</h4>
+                    <h4>Дата: {dailyTip ? dailyTip.date : ''} {dailyTip ? dailyTip.time : ''}</h4>
                 </section>
                 <section className="home-card-main">
                     <section className="home-card-team">
-                        <h2>Manchester United</h2>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/180px-Manchester_United_FC_crest.svg.png" alt="team1"/>
+                        <h2>{dailyTip ? dailyTip.team1 : ''}</h2>
+                        <img src={dailyTip ? dailyTip.team1img : ''} alt="team1"/>
                     </section>
                     <section className="home-card-tipp">
-                        Over 2.5
-                        <h1>Коефициент:2.35</h1>
-                        <a href="https://sports.bwin.de/de/sports" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Bwin_logo.png" alt="bookmaker"/></a>
+                    {dailyTip ? dailyTip.tipp : ''}
+                        <h1>Коефициент:{dailyTip ? dailyTip.coef : ''}</h1>
+                        <img src={dailyTip ? dailyTip.bookmaker : ''} alt="bookmaker"/>
                     </section>
                     <section className="home-card-team">
-                        <h2>Liverpool</h2>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/180px-Liverpool_FC.svg.png" alt="team2"/>
+                        <h2>{dailyTip ? dailyTip.team2 : ''}</h2>
+                        <img src={dailyTip ? dailyTip.team2img : ''} alt="team2"/>
                     </section>
                 </section>
             </section>
+            <Button onClick={editDaily}
+                style={{display: currentUser && currentUser.email === 'abv@abv.bgr' ? "flex" : "none" ,margin: "1rem", background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100"}}
+            >Промени прогнозата</Button>
         </div>
     )
 }

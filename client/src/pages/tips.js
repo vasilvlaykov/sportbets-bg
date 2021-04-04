@@ -54,7 +54,7 @@ export default function Tips() {
                         <Card.Body style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0rem 0.8rem" }}>
                             <h3 style={{ margin: "0", fontWeight: "bold" }}>{tip.team1}</h3>
                             <h3 style={{ margin: "0", fontWeight: "bold" }}>{tip.team2}</h3>
-                            <Button type="button" onClick={() => app.database().ref(`tips/${tip.id}`).remove()} style={{ display: currentUser && currentUser.email === tip.userEmail ? "flex" : "none", position: "absolute", top: "0", right: "0", padding: "0 0.6rem", background: "#FF9100", borderColor: "#FF9100", fontWeight: "bold" }}>x</Button>
+                            <Button type="button" onClick={() => app.database().ref(`tips/${tip.id}`).remove()} style={{ display: currentUser && (currentUser.email === tip.userEmail || currentUser.email === 'abv@abv.bgr') ? "flex" : "none", position: "absolute", top: "0", right: "0", padding: "0 0.6rem", background: "#FF9100", borderColor: "#FF9100", fontWeight: "bold" }}>x</Button>
                         </Card.Body>
                     </Card>
                 ) : ''}
