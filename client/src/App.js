@@ -16,8 +16,10 @@ import AdminRoute from './components/AdminRoute';
 import ResetPassword from './pages/ResetPassword'
 import UpdateProfile from './pages/UpdateProfile'
 import AddTip from './pages/AddTip';
+import AddPartner from './pages/AddPartner';
 import Admin from './pages/admin';
 import ErrorAdmin from './pages/error';
+import Partners from './pages/partners';
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
               <Route path="/tips" component={Tips} />
               <Route path="/game" component={Game} />
               <Route path="/login" component={Login} />
-              <Route path="/partners" component={Login} />
+              <Route path="/partners" component={Partners} />
               <Route path="/register" component={Register} />
               <Route path="/reset-password" component={ResetPassword} />
               <Route path="/error" component={ErrorAdmin} />
@@ -42,6 +44,7 @@ function App() {
               <PrivateRoute path="/add-tip" component={AddTip} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <AdminRoute path="/admin" component={Admin} />
+              <AdminRoute path="/add-partner" component={AddPartner} />
             </Switch>
           </div>
         </Container>

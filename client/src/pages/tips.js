@@ -30,9 +30,6 @@ export default function Tips() {
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    // const currentPosts = tipsList.slice(indexOfFirstPost, indexOfLastPost);
-
-    console.log(tipsList)
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
 
