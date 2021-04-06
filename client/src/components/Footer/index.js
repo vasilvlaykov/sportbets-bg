@@ -10,7 +10,7 @@ function Footer() {
                         style={{ maxWidth: '400px' }} />
                 </FooterLogo>
                 <FooterGroup>
-                    <FooterLink to="/about">ЗА НАС</FooterLink>
+                    <FooterLink to="/contact">КОНТАКТИ</FooterLink>
                     <FooterLink to="/partners">ПАРТНЬОРИ</FooterLink>
                 </FooterGroup>
                 <FooterGroup>

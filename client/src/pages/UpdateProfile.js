@@ -73,7 +73,8 @@ export default function UpdateProfile() {
                 placeholder="Остави празно ако не искаш промяна"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button disabled={loading} className="w-100" type="submit"
+            style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
               Обнови
             </Button>
           </Form>

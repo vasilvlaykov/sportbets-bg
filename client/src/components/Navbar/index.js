@@ -37,14 +37,14 @@ export default function Navbar() {
                 </NavLogo>
                 <Bars />
                 <NavMenu>
-                    <NavLink to="/about" >
-                        ЗА НАС
-                    </NavLink>
                     <NavLink to="/tips" >
                         ПРОГНОЗИ
                     </NavLink>
-                    <NavLink to="/game" >
-                        ИГРА НА ФЕНИКСА
+                    <NavLink to="/partners" >
+                        ПАРТНЬОРИ
+                    </NavLink>
+                    <NavLink to="/contact" >
+                        КОНТАКТИ
                     </NavLink>
                 </NavMenu>
                 <NavMenu>

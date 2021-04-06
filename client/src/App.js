@@ -2,11 +2,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
-import Game from './pages/game';
 import Login from './pages/login';
 import Register from './pages/register';
 import Tips from './pages/tips';
-import About from './pages/about';
+import Contact from './pages/contact';
 import Profile from './pages/profile';
 import Footer from './components/Footer';
 import { Container } from 'react-bootstrap';
@@ -32,9 +31,8 @@ function App() {
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
               <Route path="/tips" component={Tips} />
-              <Route path="/game" component={Game} />
               <Route path="/login" component={Login} />
               <Route path="/partners" component={Partners} />
               <Route path="/register" component={Register} />
