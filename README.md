@@ -4,6 +4,7 @@ ReactJs Web Project
 In order to run the project you need to have the following dependencies installed:
 
 "bootstrap": "^4.6.0",
+"emailjs-com": "^2.6.4",
 "firebase": "^8.3.1",
 "react": "^17.0.2",
 "react-bootstrap": "^1.5.2",
