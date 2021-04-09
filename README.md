@@ -4,6 +4,7 @@ ReactJs Web Project
 In order to run the project you need to have the following dependencies installed:
 
 "bootstrap": "^4.6.0",
+"emailjs-com": "^2.6.4",
 "firebase": "^8.3.1",
 "react": "^17.0.2",
 "react-bootstrap": "^1.5.2",
@@ -15,3 +16,5 @@ In order to run the project you need to have the following dependencies installe
 "web-vitals": "^1.1.1"
 
 Run the application from the client folder with npm start
+
+Deployed App: https://quizzical-lamport-dc4cb0.netlify.app/
