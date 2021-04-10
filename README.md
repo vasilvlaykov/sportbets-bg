@@ -5,7 +5,7 @@ This is a web application for people who love football tips. You can:
 - find daily tips from our experts
 - write your own tips and see the tips from other users
 - visit our partners to get bonuses 
-.......................................................................................
+
 
 In order to run the project you need to have the following dependencies installed:
 
