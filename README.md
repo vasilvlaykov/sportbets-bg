@@ -1,6 +1,12 @@
 # sportbets-bg
 ReactJs Web Project
 
+This is a web application for people who love football tips. You can:
+- find daily tips from our experts
+- write your own tips and see the tips from other users
+- visit our partners to get bonuses 
+
+
 In order to run the project you need to have the following dependencies installed:
 
 "bootstrap": "^4.6.0",
@@ -17,4 +23,4 @@ In order to run the project you need to have the following dependencies installe
 
 Run the application from the client folder with npm start
 
-Deployed App: https://quizzical-lamport-dc4cb0.netlify.app/
+Deployed App: https://epic-tereshkova-bbd312.netlify.app/
