@@ -56,33 +56,33 @@ export default function AddTip() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Нова прогноза</h2>
+                    <h2 className="text-center mb-4">Add Tip</h2>
                     <Form onSubmit={testOne}>
                         <Form.Group id="team1">
-                            <Form.Label>Домакин</Form.Label>
+                            <Form.Label>Home</Form.Label>
                             <Form.Control type="text" onChange={changeTeam1} value={team1} required />
                         </Form.Group>
                         <Form.Group id="team2">
-                            <Form.Label>Гост</Form.Label>
+                            <Form.Label>Away</Form.Label>
                             <Form.Control type="text" onChange={changeTeam2} value={team2} required />
                         </Form.Group>
                         <Form.Group id="tipp">
-                            <Form.Label>Прогноза</Form.Label>
+                            <Form.Label>Tip</Form.Label>
                             <Form.Control type="text" onChange={changeTip} value={tipp} required />
                         </Form.Group>
                         <Form.Group style={{ display: "flex", justifyContent: 'space-between' }}>
                             <Form.Group id="date">
-                                <Form.Label>Дата</Form.Label>
+                                <Form.Label>Date</Form.Label>
                                 <Form.Control type="date" onChange={changeDate} value={date} required />
                             </Form.Group>
                             <Form.Group id="time">
-                                <Form.Label>Час</Form.Label>
+                                <Form.Label>Time</Form.Label>
                                 <Form.Control type="time" onChange={changeTime} value={time} required />
                             </Form.Group>
                         </Form.Group>
                         <Button className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Добави
+                            Add tip
                         </Button>
                     </Form>
                 </Card.Body>

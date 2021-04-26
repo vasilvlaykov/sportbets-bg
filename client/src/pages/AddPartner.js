@@ -33,19 +33,19 @@ export default function AddPartner() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Добави партньор</h2>
+                    <h2 className="text-center mb-4">Add partner</h2>
                     <Form onSubmit={testOne}>
                         <Form.Group id="partnerUrl">
                             <Form.Label>URL</Form.Label>
                             <Form.Control type="text" onChange={changeUrl} value={url} required />
                         </Form.Group>
                         <Form.Group id="partnerImg">
-                            <Form.Label>Изображение</Form.Label>
+                            <Form.Label>Image URL</Form.Label>
                             <Form.Control type="text" onChange={changeImg} value={img} required />
                         </Form.Group>
                         <Button className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Добави
+                            Add partner
                         </Button>
                     </Form>
                 </Card.Body>

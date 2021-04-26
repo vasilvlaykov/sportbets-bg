@@ -15,7 +15,7 @@ export default function UpdateProfile() {
   function handleSubmit(e) {
     e.preventDefault()
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Паролите не съвпадат")
+      return setError('Passwords don\'t match')
     }
 
     const promises = []
@@ -34,7 +34,7 @@ export default function UpdateProfile() {
         history.push("/profile")
       })
       .catch(() => {
-        setError("Неуспешно обновяване на профила")
+        setError("Update unsuccessful")
       })
       .finally(() => {
         setLoading(false)
@@ -43,13 +43,13 @@ export default function UpdateProfile() {
 
   return (
     <>
-      <Card>
+      <Card style={{minWidth: "300px"}}>
         <Card.Body>
-          <h2 className="text-center mb-4">Обновяване на профил</h2>
+          <h2 className="text-center mb-4">Update profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
-              <Form.Label>Имейл</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
                 ref={emailRef}
@@ -58,30 +58,30 @@ export default function UpdateProfile() {
               />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Парола</Form.Label>
+              <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Остави празно ако не искаш промяна"
+                placeholder="Leave empty for no change"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
-              <Form.Label>Потвърди паролата</Form.Label>
+              <Form.Label>Repeat password</Form.Label>
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Остави празно ако не искаш промяна"
+                placeholder="Leave empty for no change"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit"
             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-              Обнови
+              Update
             </Button>
           </Form>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/">Отказ</Link>
+        <Link to="/">Cancel</Link>
       </div>
     </>
   )

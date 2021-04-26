@@ -11,10 +11,10 @@ export default function Contact() {
 
         emailjs.sendForm('service_5ww1z25', 'template_zjbamcf', e.target, 'user_QvjszyF6o78wF7Ib3Bzyd')
             .then((result) => {
-                setMessage('Успешно изпратихте съобщението')
+                setMessage('Message sent')
                 setError('')
             }, (error) => {
-                setError('Неуспешно изпращане')
+                setError('Message not sent')
             });
 
         e.target.reset()
@@ -24,31 +24,31 @@ export default function Contact() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Контакт</h2>
+                    <h2 className="text-center mb-4">Contact</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     {message && <Alert variant="success">{message}</Alert>}
                     <Form onSubmit={sendEmail}>
                         <Form.Group id="email">
-                            <Form.Label>Имейл</Form.Label>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control type="email" required name="email" />
                         </Form.Group>
                         <Form.Group id="username">
-                            <Form.Label>Име</Form.Label>
+                            <Form.Label>Name</Form.Label>
                             <Form.Control type="text" required name="username" />
                         </Form.Group>
                         <Form.Group id="subject">
-                            <Form.Label>Тема</Form.Label>
+                            <Form.Label>Subject</Form.Label>
                             <Form.Control type="text" required name="subject" />
                         </Form.Group>
                         <Form.Group id="message">
-                            <Form.Label>Съобщение</Form.Label>
+                            <Form.Label>Message</Form.Label>
                             <Form.Control type="text" required rows={4} as="textarea" name="message"
                                 style={{ minWidth: "400px", resize: "vertical" }}
                             />
                         </Form.Group>
                         <Button className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Изпрати
+                            Send
                         </Button>
                     </Form>
                 </Card.Body>

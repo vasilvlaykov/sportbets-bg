@@ -10,10 +10,10 @@ export default function Dashboard() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Профил</h2>
-          <strong>Имейл:</strong> {currentUser.email}
+          <h2 className="text-center mb-4">Profile</h2>
+          <strong>Email:</strong> {currentUser.email}
           <Link to="/update-profile" className="btn btn-primary w-100 mt-3" style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-            Обнови профила
+            Update profile
           </Link>
         </Card.Body>
       </Card>

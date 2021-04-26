@@ -38,25 +38,25 @@ export default function Navbar() {
                 <Bars />
                 <NavMenu>
                     <NavLink to="/tips" >
-                        ПРОГНОЗИ
+                        TIPS
                     </NavLink>
                     <NavLink to="/partners" >
-                        ПАРТНЬОРИ
+                        PARTNERS
                     </NavLink>
                     <NavLink to="/contact" >
-                        КОНТАКТИ
+                        CONTACTS
                     </NavLink>
                 </NavMenu>
                 <NavMenu>
                     <NavBtn>
                         <NavBtnLink to="/login"
                             style={{ display: currentUser ? "none" : "initial" }}
-                        >ВХОД</NavBtnLink>
+                        >LOGIN</NavBtnLink>
                     </NavBtn>
                     <NavBtn>
                         <NavBtnLink className="reg-btn" to="/register"
                             style={{ display: currentUser ? "none" : "initial" }}
-                        >РЕГИСТРАЦИЯ</NavBtnLink>
+                        >SIGN UP</NavBtnLink>
                     </NavBtn>
                     <Button onClick={toProfile}
                         style={{ display: !currentUser ? "none" : "flex", fontWeight: "bold", background: "#fff", border: "2px solid #fff", color: "#000", marginRight: "1rem", outline: "none" }}
@@ -65,7 +65,7 @@ export default function Navbar() {
                     </Button>
                     <Button onClick={handleLogout}
                         style={{ display: !currentUser ? "none" : "initial", padding: "12px 20px", borderRadius: "30px", fontWeight: "bold", background: "#FF9100", border: "2px solid #FF9100" }}
-                    >ИЗХОД
+                    >LOGOUT
                     </Button>
                 </NavMenu>
             </Nav>

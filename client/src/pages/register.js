@@ -17,7 +17,7 @@ export default function Register() {
         e.preventDefault()
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Паролите не съвпадат')
+            return setError('Passwords don\'t match!')
         }
 
         try {
@@ -26,7 +26,7 @@ export default function Register() {
             await signup(emailRef.current.value, passwordRef.current.value)
             history.push("/profile")
         } catch {
-            setError('Неуспешна регистрация')
+            setError('Sign up unsuccessful')
         }
         setLoading(false)
 
@@ -36,30 +36,30 @@ export default function Register() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Регистрация</h2>
+                    <h2 className="text-center mb-4">Sign up</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
-                            <Form.Label>Имейл</Form.Label>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Парола</Form.Label>
+                            <Form.Label>Password</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Form.Group id="password-confirm">
-                            <Form.Label>Потвърдете паролата</Form.Label>
+                            <Form.Label>Repeat password</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Регистрирай се
+                            Sign up
                         </Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Вече имате акаунт? <Link to="/login">Вход</Link>
+                Already have an account? <Link to="/login">Login</Link>
             </div>
         </>
     )

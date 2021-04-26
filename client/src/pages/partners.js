@@ -28,7 +28,7 @@ export default function Partners() {
     return (
         <>
             <Card style={{ border: "none", minWidth: "800px", display: "flex", justifyContent: "center", alignSelf: "center" }}>
-                <h2 style={{ textAlign: "center" }}>Партньори</h2>
+                <h2 style={{ textAlign: "center" }}>Partners</h2>
                 {partnersList ? partnersList.map((partner, index) =>
                     <Card key={index} style={{ maxHeight: "60px", alignSelf: "center", margin:"0.5rem" }}>
                         <a href={partner.url} target="blank"><img src={partner.img} alt="partner-img" style={{height: "60px"}}/></a>
@@ -37,7 +37,7 @@ export default function Partners() {
                 ) : ''}
                 <Button onClick={toAddPartner}
                     style={{ display: currentUser && currentUser.email === 'abv@abv.bgr' ? "flex" : "none", alignSelf: "center", margin: "0", padding: "12px 20px", background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}
-                >Добави партньор</Button>
+                >Add partner</Button>
                             
             </Card>
         </>

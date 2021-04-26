@@ -19,9 +19,9 @@ export default function ResetPassword() {
             setError('')
             setLoading(true)
             await resetPassword(emailRef.current.value)
-            setMessage("Проверете Вашия имейл")
+            setMessage("Check your email")
         } catch {
-            setError('Неуспешно изпращане')
+            setError('Reset unsuccessful')
         }
         setLoading(false)
 
@@ -31,26 +31,26 @@ export default function ResetPassword() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Забравена парола</h2>
+                    <h2 className="text-center mb-4">Forgot password</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     {message && <Alert variant="success">{message}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
-                            <Form.Label>Имейл</Form.Label>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Изпрати нова парола
+                            Reset password
                         </Button>
                     </Form>
                     <div className="w-100 text-center mt-3">
-                        <Link to="/login">Вход</Link>
+                        <Link to="/login">Login</Link>
                     </div>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Нямате акаунт? <Link to="/register">Регистрирайте се</Link>
+            Don't have an account? <Link to="/register">Sign up</Link>
             </div>
         </>
     )

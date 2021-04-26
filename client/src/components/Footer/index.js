@@ -10,8 +10,8 @@ function Footer() {
                         style={{ maxWidth: '400px' }} />
                 </FooterLogo>
                 <FooterGroup>
-                    <FooterLink to="/contact">КОНТАКТИ</FooterLink>
-                    <FooterLink to="/partners">ПАРТНЬОРИ</FooterLink>
+                    <FooterLink to="/contact">CONTACTS</FooterLink>
+                    <FooterLink to="/partners">PARTNERS</FooterLink>
                 </FooterGroup>
                 <FooterGroup>
                     <FooterLink as="a" href="https://www.facebook.com/" target="_blank">

@@ -21,7 +21,7 @@ export default function Login() {
             await login(emailRef.current.value, passwordRef.current.value)
             history.push("/profile")
         } catch {
-            setError('Неуспешнен вход')
+            setError('Login unsuccessful')
         }
         setLoading(false)
 
@@ -31,29 +31,29 @@ export default function Login() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Вход</h2>
+                    <h2 className="text-center mb-4">Login</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
-                            <Form.Label>Имейл</Form.Label>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Парола</Form.Label>
+                            <Form.Label>Password</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Вход
+                            Login
                         </Button>
                     </Form>
                     <div className="w-100 text-center mt-3">
-                        <Link to="/reset-password">Забравена парола</Link>
+                        <Link to="/reset-password">Forgot password</Link>
                     </div>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Нямате акаунт? <Link to="/register">Регистрирайте се</Link>
+                Don't have an account? <Link to="/register">Sign up</Link>
             </div>
         </>
     )

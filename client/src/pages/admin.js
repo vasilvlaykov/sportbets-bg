@@ -80,47 +80,47 @@ export default function Admin() {
         <>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Дневна прогноза</h2>
+                    <h2 className="text-center mb-4">Daily Tip</h2>
                     <Form onSubmit={testOne}>
                         <Form.Group style={{ display: "flex"}}>
                             <Form.Group style={{marginRight: "2rem"}}>
                                 <Form.Group id="team1">
-                                    <Form.Label>Домакин</Form.Label>
+                                    <Form.Label>Home</Form.Label>
                                     <Form.Control type="text" onChange={changeTeam1} value={team1} required />
                                 </Form.Group>
                                 <Form.Group id="team1-img">
-                                    <Form.Label>Домакин-Лого</Form.Label>
+                                    <Form.Label>Home-Logo</Form.Label>
                                     <Form.Control type="text" onChange={changeTeam1img} value={team1img} required />
                                 </Form.Group>
                                 <Form.Group id="team2">
-                                    <Form.Label>Гост</Form.Label>
+                                    <Form.Label>Away</Form.Label>
                                     <Form.Control type="text" onChange={changeTeam2} value={team2} required />
                                 </Form.Group>
                                 <Form.Group id="team2-img">
-                                    <Form.Label>Гост-Лого</Form.Label>
+                                    <Form.Label>Away-Logo</Form.Label>
                                     <Form.Control type="text" onChange={changeTeam2img} value={team2img} required />
                                 </Form.Group>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Group id="tipp">
-                                    <Form.Label>Прогноза</Form.Label>
+                                    <Form.Label>Tip</Form.Label>
                                     <Form.Control type="text" onChange={changeTip} value={tipp} required />
                                 </Form.Group>
                                 <Form.Group id="coef">
-                                    <Form.Label>Коефициент</Form.Label>
+                                    <Form.Label>Odd</Form.Label>
                                     <Form.Control type="number" onChange={changeCoef} value={coef} required />
                                 </Form.Group>
                                 <Form.Group id="bookmaker">
-                                    <Form.Label>Букмейкър</Form.Label>
+                                    <Form.Label>Bookmaker</Form.Label>
                                     <Form.Control type="text" onChange={changeBook} value={bookmaker} required />
                                 </Form.Group>
                                 <Form.Group style={{ display: "flex", justifyContent: 'space-between' }}>
                                     <Form.Group id="date">
-                                        <Form.Label>Дата</Form.Label>
+                                        <Form.Label>Date</Form.Label>
                                         <Form.Control type="date" onChange={changeDate} value={date} required />
                                     </Form.Group>
                                     <Form.Group id="time">
-                                        <Form.Label>Час</Form.Label>
+                                        <Form.Label>Time</Form.Label>
                                         <Form.Control type="time" onChange={changeTime} value={time} required />
                                     </Form.Group>
                                 </Form.Group>
@@ -128,7 +128,7 @@ export default function Admin() {
                         </Form.Group>
                         <Button className="w-100" type="submit"
                             style={{ background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}>
-                            Обнови
+                            Update
                         </Button>
                     </Form>
                 </Card.Body>

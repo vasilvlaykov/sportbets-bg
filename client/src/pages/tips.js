@@ -37,7 +37,7 @@ export default function Tips() {
     return (
         <>
             <Card style={{ border: "none", minWidth: "800px", display: "flex", justifyContent: "center", alignSelf: "center" }}>
-                <h2 style={{ textAlign: "center" }}>Потребителски Прогнози</h2>
+                <h2 style={{ textAlign: "center" }}>Users Tips</h2>
                 {tipsList ? tipsList.sort((a, b) => {
                     return a.date.localeCompare(b.date) === 0 ? a.time.localeCompare(b.time) : a.date.localeCompare(b.date) 
                 }).slice(indexOfFirstPost, indexOfLastPost).map((tip, index) =>
@@ -62,7 +62,7 @@ export default function Tips() {
                 />
                 <Button onClick={toAddTip}
                     style={{ display: !currentUser ? "none" : "flex", alignSelf: "center", margin: "0", padding: "12px 20px", background: "#FF9100", fontWeight: "bold", borderColor: "#FF9100" }}
-                >Добави прогноза</Button>
+                >Add Tip</Button>
             </Card>
         </>
     )
