@@ -23,4 +23,4 @@ In order to run the project you need to have the following dependencies installe
 
 Run the application from the client folder with npm start
 
-Deployed App: https://epic-tereshkova-bbd312.netlify.app/
+Deployed App: https://goofy-lewin-6da4d4.netlify.app/
